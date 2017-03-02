@@ -1,0 +1,47 @@
+.navbar.navbar-custom {
+  height: 110px;
+  background: #000;
+  border-radius: 0;
+  border: none;
+  padding-top: 10px;
+}
+.navbar-custom .navbar-header .navbar-toggle,
+.navbar-custom .navbar-header .navbar-toggle:hover,
+.navbar-custom .navbar-header .navbar-toggle:focus {
+  border: none;
+  background: none;
+}
+.navbar-custom .navbar-header .navbar-toggle .icon-bar {
+  background: #222;
+}
+.navbar-custom .collapse .navbar-nav > li > a,
+.navbar-custom .navbar-brand {
+  color: #fff;
+}
+.navbar-custom .collapse .navbar-nav > li > a:hover,
+.navbar-custom .collapse .navbar-nav > li > a:focus {
+  background: none;
+  color: #f00;
+}
+
+.navbar-wrapper .navbar {
+  border-radius: 0px;
+}
+
+.navbar-brand {
+	padding-top: 0;
+	margin-right: 20px;
+}
+.navbar-brand img {
+	height: 90px;
+}
+
+.navbar-custom .navbar-nav {
+	padding-top: 17px;
+	font-size: 1.5em;
+}
+
+
+.navbar-custom .navbar-nav > .active a {
+	background: none;
+}
