@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,24 +33,28 @@
     <link href="../css/carousel.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
   </head>
-<!-- NAVBAR
-================================================== -->
+
   <body>
+  	<!-- FACEBOOK SDK -->
     <div id="fb-root"></div>
     <script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "**http:**//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+	    (function(d, s, id) {
+	      var js, fjs = d.getElementsByTagName(s)[0];
+	      if (d.getElementById(id)) return;
+	      js = d.createElement(s); js.id = id;
+	      js.src = "**http:**//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+	      fjs.parentNode.insertBefore(js, fjs);
+	    }(document, 'script', 'facebook-jssdk'));
+    </script>
 
+
+	<!-- NAVBAR -->
     <div class="navbar-wrapper">
       <div class="container">
-
         <nav class="navbar navbar-default navbar-fixed-top navbar-custom" role="navigation">
           <div class="container">
+			
+			<!-- ICON -->
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -58,6 +64,8 @@
               </button>
               <a class="navbar-brand" href="index.html"><img alt="NETCO" src="../img/netco.png"/></a>
             </div>
+			
+			<!-- LINKS -->
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="index.html" class="glyphicon glyphicon-home"></a></li>
@@ -77,108 +85,117 @@
                 <li>
               </ul>
             </div>
+
+
           </div>
         </nav>
-
       </div>
     </div>
 
 
-    <!-- Carousel
-    ================================================== -->
+    <!-- CAROUSEL -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide" src="../img/bike1.webp" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example Trail</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">View Trail</a></p>
-            </div>
-          </div>
+
+      	<!-- INDICATORS -->
+      	<ol class="carousel-indicators">
+	        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+	        <li data-target="#myCarousel" data-slide-to="2"></li>
+      	</ol>
+		
+	  	<!-- ITEMS -->
+      	<div class="carousel-inner" role="listbox">
+
+	        <div class="item active">
+	          	<img class="first-slide" src="../img/bike1.webp" alt="First slide">
+	          	<div class="container">
+	            	<div class="carousel-caption">
+	              		<h1>Example Trail</h1>
+	              		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	              		<p><a class="btn btn-lg btn-primary" href="#" role="button">View Trail</a></p>
+	            	</div>
+	          	</div>
+	        </div>
+
+	        <div class="item">
+	          	<img class="second-slide" src="../img/bike2.webp" alt="Second slide">
+	          	<div class="container">
+	            	<div class="carousel-caption">
+	              		<h1>Example Trail</h1>
+	              		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	              		<p><a class="btn btn-lg btn-primary" href="#" role="button">View Trail</a></p>
+	            	</div>
+	          	</div>
+	        </div>
+
+	        <div class="item">
+	          	<img class="third-slide" src="../img/bike3.webp" alt="Third slide">
+	          	<div class="container">
+	            	<div class="carousel-caption">
+	              		<h1>Example Trail</h1>
+	              		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	              		<p><a class="btn btn-lg btn-primary" href="#" role="button">View Trail</a></p>
+	            	</div>
+	          	</div>
+	        </div>
+
+    	</div>
+	  	
+	  	<!-- CONTROLS -->
+	    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	        <span class="sr-only">Previous</span>
+	    </a>
+
+	    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	        <span class="sr-only">Next</span>
+	    </a>
+
+    </div>
+	
+	<!-- CONTENT -->
+    <div class="container">
+      	<div class="row featurette">
+        	<div class="col-md-12">
+          		<div class="row featurette">
+
+          			<!-- INFORMATION -->
+            		<div class="col-md-8">
+		                <h2 class="featurette-heading">Welcome <span class="text-muted">to the official website for NETCO: North East Trail Centre Organisation</span></h2>
+		                <p class="lead">You can join our mailing list by clicking here.  The mailing list receives periodic emails detailing important milestones and announcements of upcoming events.
+		                <br>
+		                <br>
+		                You can follow our progress as we work towards delivering a much sought after mountain bike trail centre in Aberdeenshire.
+		                <br>
+		                <br>
+		                NETCO is a registered charity (SC 046136). Public and corporate donations will be absolutely crucial in turning the NETCO dream into a reality. If you believe in what NETCO are doing, you’ll need to help us so that we can help you. Please contribute via our Support NETCO page to help secure the future of mountain biking in Aberdeenshire.
+		                <br>
+		                <br>
+		                Have a read of our vision, meet the team and please get in touch! We welcome any letters of support - showing that we have a broad base of support is vital to the success of the project.
+		                <br>
+		                <br>
+		                Let’s create the best trail centre in Scotland and put the North East on the map!</p>
+            		</div>
+					
+					<!-- FACEBOOK FEED -->
+	            	<div class="col-md-4">
+	              		<h3 class="featurette-heading">Feed</h3>
+	              		<div class="fb-page" data-href="https://www.facebook.com/netcomtb/" data-tabs="timeline" data-width="400" data-height="800" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/netcomtb/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/netcomtb/">NETCO</a></blockquote></div>
+	            	</div>
+
+          		</div>
+
+	          	<hr class="featurette-divider">
+
+	          	<!-- FOOTER -->
+	          	<footer>
+	            	<p class="pull-right"><a href="#">Back to top</a></p>
+	            	<p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+	          	</footer>
+			</div>
         </div>
-        <div class="item">
-          <img class="second-slide" src="../img/bike2.webp" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example Trail</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">View Trail</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="third-slide" src="../img/bike3.webp" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example Trail</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">View Trail</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-8">
-                <h2 class="featurette-heading">Welcome <span class="text-muted">to the official website for NETCO: North East Trail Centre Organisation</span></h2>
-                <p class="lead">You can join our mailing list by clicking here.  The mailing list receives periodic emails detailing important milestones and announcements of upcoming events.
-                <br>
-                <br>
-                You can follow our progress as we work towards delivering a much sought after mountain bike trail centre in Aberdeenshire.
-                <br>
-                <br>
-                NETCO is a registered charity (SC 046136). Public and corporate donations will be absolutely crucial in turning the NETCO dream into a reality. If you believe in what NETCO are doing, you’ll need to help us so that we can help you. Please contribute via our Support NETCO page to help secure the future of mountain biking in Aberdeenshire.
-                <br>
-                <br>
-                Have a read of our vision, meet the team and please get in touch! We welcome any letters of support - showing that we have a broad base of support is vital to the success of the project.
-                <br>
-                <br>
-                Let’s create the best trail centre in Scotland and put the North East on the map!</p>
-            </div>
-            <div class="col-md-4">
-              <h3 class="featurette-heading">Feed</h3>
-              <div class="fb-page" data-href="https://www.facebook.com/netcomtb/" data-tabs="timeline" data-width="400" data-height="800" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/netcomtb/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/netcomtb/">NETCO</a></blockquote></div>
-            </div>
-          </div>
-        </div>
-
-          <hr class="featurette-divider">
-
-          <!-- /END THE FEATURETTES -->
-
-
-          <!-- FOOTER -->
-          <footer>
-            <p class="pull-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-          </footer>
-        </div>
-    </div><!-- /.container -->
+    </div>
 
 
     <!-- Bootstrap core JavaScript
@@ -193,8 +210,28 @@
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
-    api.openweathermap.org/data/2.5/weather?q={city name}
+    	function getJSONP(url, success) {
 
+		    var ud = '_' + +new Date,
+		        script = document.createElement('script'),
+		        head = document.getElementsByTagName('head')[0] 
+		               || document.documentElement;
+
+		    window[ud] = function(data) {
+		        head.removeChild(script);
+		        success && success(data);
+		    };
+
+		    script.src = url.replace('callback=?', 'callback=' + ud);
+		    head.appendChild(script);
+
+		}
+
+		getJSONP('api.openweathermap.org/data/2.5/forecast/city?id=3333224&APPID=60ef62929ef2e03d5fdef0ee747df425', function(data){
+    		console.log(data.list.main.temp);
+    	});
+
+    </script>
 
   </body>
 </html>
