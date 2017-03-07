@@ -59,9 +59,9 @@
             <span class="icon-bar"></span>
             </button>
             
-            <!-- Non-collapsing right-side icons -->
+            <!-- RIGHT NAV -->
 	            <ul class="nav navbar-nav navbar-right">
-	               <li>Temp</li>
+	               <li id='temp'>Temp</li>
 			       <li>Twitter</li>
 			       <li>Facebook</li>
 			       <li>Instagram</li>
@@ -88,7 +88,7 @@
             <!--/.nav-collapse -->
         </div>
          <!--/.container -->
-      </nav>
+    </nav>
 
 
     <!-- CAROUSEL -->
@@ -178,6 +178,10 @@
 					
 					<!-- FACEBOOK FEED -->
 	            	<div class="col-md-4">
+	            		<h3 class="featurette-heading">Weather</h3>
+	            		Today: <span id="today"></span>
+	            		<br>
+	            		Tomorrow: <span id="tomorrow"></span>
 	              		<h3 class="featurette-heading">Feed</h3>
 	              		<div class="fb-page" data-href="https://www.facebook.com/netcomtb/" data-tabs="timeline" data-width="400" data-height="800" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/netcomtb/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/netcomtb/">NETCO</a></blockquote></div>
 	            	</div>
@@ -208,27 +212,15 @@
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
-    	function getJSONP(url, success) {
-
-		    var ud = '_' + +new Date,
-		        script = document.createElement('script'),
-		        head = document.getElementsByTagName('head')[0] 
-		               || document.documentElement;
-
-		    window[ud] = function(data) {
-		        head.removeChild(script);
-		        success && success(data);
-		    };
-
-		    script.src = url.replace('callback=?', 'callback=' + ud);
-		    head.appendChild(script);
-
-		}
-
-		getJSONP('api.openweathermap.org/data/2.5/forecast/city?id={3333224}&APPID=60ef62929ef2e03d5fdef0ee747df425', function(data){
-    		console.log(data.list.main.temp);
-    	});
-
+		$(document).ready(function() {
+			$today = $('#today');
+			$tomorrow = $('#tomorrow');
+			$.getJSON('http://api.openweathermap.org/data/2.5/forecast?id=3333224&appid=60ef62929ef2e03d5fdef0ee747df425', function(result) {
+				console.log(result);
+				$today.append(result.list[0].weather[0].description);
+				$tomorrow.append(result.list[1].weather[0].description);
+			});
+		});
     </script>
 
   </body>
